@@ -1,0 +1,15 @@
+.a{
+	position: relative;
+	display: inline-block;
+}
+
+.a p{
+	position: absolute;
+	color: black;
+	top:60;
+	left: 60;
+}
+
+div1{
+	text-align:right;
+}
