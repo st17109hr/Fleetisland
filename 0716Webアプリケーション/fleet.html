@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fleet</title>
+    <link rel="stylesheet" type="text/css" href="./fleet.css">
+    <link rel="stylesheet" href="./fleet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <img src="Seven Eleven.ico" id="icon" class="head">
+        <h2><a href="home.html" style="text-decoration:none;" id="title" class="head">FLEET</a></h2>
+        <a href="register.html" style="text-decoration:none;" id="log" class="head">ログの登録</a>
+        <a href="fleetlist.html" style="text-decoration:none;" id="register" class="head">ログの一覧</a>
+    </div>
+    <div class="content">
+        <p class="date_tag">　日付</p>
+        <h1 class="date">{{ fleet.date }}</h1>
+        <p class="name_tag">　名前</p>
+        <h2 class="name">{{ fleet.name }}</h2>
+        <p class="text_tag">　内容</p>
+        <h3 class="text">{{ fleet.text }}</h3>
+    </div>
+    <script src="fleet.js"></script>
+</body>
+
+</html>

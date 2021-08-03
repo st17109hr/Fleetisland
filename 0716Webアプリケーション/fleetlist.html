@@ -1,0 +1,5 @@
+{% if fleet_list %} {% for fleet in fleet_list %}
+<li>
+    <a href="{% url 'myapp:fleet_detail' fleet.id %}">{{ fleet.date }}</a> {{ fleet.name }}
+</li>
+{% endfor %} {% endif %}

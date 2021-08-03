@@ -1,0 +1,25 @@
+{% load static %}
+<link rel="stylesheet" href="{% static "css/fleetlist.css" %}">
+{% if fleet_list %}
+    {% for fleet in fleet_list %}
+        <div class="a"><a href="{% url 'myapp:fleet_detail' fleet.id %}"><img src="{% static "png/Dkun_icon.png"%}" width="200" heigt="200"></a>
+        <p><big><big></big></big></p></div>
+    {% endfor %}
+{% endif %}
+
+<div1>
+	<img src="{% static "png/つうぃったー.png"%}"" width="900" height="500" border="30">
+</div1>
+
+
+
+{% comment %} {% load static %}
+
+{% if fleet_list %}
+    {% for fleet in fleet_list %}
+    <li>
+        <a href="{% url 'myapp:fleet_detail' fleet.id %}">{{ fleet.date }}</a>
+        {{ fleet.name }}
+    </li>
+    {% endfor %}
+{% endif %} {% endcomment %}

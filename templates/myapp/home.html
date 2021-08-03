@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fleet</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <img src="{% static "png/Seven Eleven.ico"%}" id="icon" class="head">
+        <h2><a href="{% url 'myapp:fleet_home' %}" style="text-decoration:none;" id="title" class="head">FLEET</a></h2>
+        <a href="{% url 'myapp:fleet_rigister' %}" style="text-decoration:none;" id="log" class="head">
+            Fleetの投稿
+        </a>
+        <a href="{% url 'myapp:fleet_list' %}" style="text-decoration:none;" id="register" class="head">
+            Fleetの一覧
+        </a>
+    </div>
+    <div class="content">
+        <h1 class="mtitle">サポートページ</h1>
+        <div class="step1">
+            <h2 id="explain">システム概要</h2>
+            <p id="explain_c"></p>
+        </div>
+        <div class="step2">
+            <h2>基本的な使い方</h2>
+            <ul>
+                <li class="menu1">Fleetの投稿</li>
+                <p class="menu1_c">
+                    こちらでは、自身でFleetを投稿することができます。<br><br> 1.上の”Fleetの投稿”もしくは下の”Fleetの投稿はこちら”をクリックしてください。
+                    <br> 2.クリックした後、フォームに名前とつぶやく内容を自由に書いてください。
+                    <br>3.Fleetの一覧から自身のFleetや他者のFleetを閲覧することができます
+                    <br><br>
+                </p>
+                <li class="menu2">Fleetの一覧</li>
+                <p class="menu2_c">
+                    こちらでは、自身または、他者が書いたFleetを閲覧できます。 <br><br> 1.上の”Fleetの一覧”もしくは下の”Fleetの一覧はこちら”をクリックしてください。 <br> 2.クリックした後、フォームには書き込んだ人の名前と月日がリスト化されています。 <br> 3.名前をクリックします。<br> 4.その人が書いた内容が閲覧できます。<br>
+                    <br>
+                </p>
+            </ul>
+        </div>
+        <div class="box">
+            <ul>
+                <li class="r_button">
+                    <a href="{% url 'myapp:fleet_rigister' %}" style="text-decoration:none;"><img src="{% static "png/log_reg.png"%}" onmouseover="this.src='{% static "png/log_reg2.png"%}'" onmouseout="this.src='{% static "png/log_reg.png"%}'" class="img_reg"></a>
+                </li>
+                <li class="l_button">
+                    <a href="{% url 'myapp:fleet_list' %}" style="text-decoration:none;"><img src="{% static "png/log_list.png"%}" onmouseover="this.src='{% static "png/log_list2.png"%}'" onmouseout="this.src='{% static "png/log_list.png"%}'" class="img_list"> </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="start">
+        <p class="log"><img src="{% static "png/Seven Eleven.ico"%}" alt=""></p>
+        <h1 class="title">FLEET</h1>
+    </div>
+    <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
+</body>
+
+</html>
